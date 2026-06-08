@@ -56,6 +56,7 @@ export const galleryData = [
         title: '芳香疗法包装',
         description: '插画由 mousegraphics 绘制',
         image: '/images/cutthroat-gin.jpg',
+        hoverImage: '/images/cutthroat-gin-hover.png',
         size: 'large',
       },
       {
