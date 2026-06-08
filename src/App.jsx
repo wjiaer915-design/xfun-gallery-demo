@@ -146,16 +146,20 @@ function DetailModal({ item, onClose }) {
           <img src={item.image} alt={item.title} className="h-full max-h-full w-full object-contain" />
         </motion.div>
         <motion.div
-          className="mx-auto flex w-full max-w-[1260px] flex-col justify-between gap-3 text-white md:flex-row md:items-end"
+          className="mx-auto flex w-full max-w-[1260px] flex-col justify-between gap-4 rounded-[10px] border border-white/12 bg-black/48 px-5 py-4 text-white shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur-md md:flex-row md:items-end md:px-6"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.12 }}
         >
           <div>
-            <h3 className="text-2xl font-extrabold md:text-3xl">{item.title}</h3>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-white/72">{item.description}</p>
+            <h3 className="text-2xl font-extrabold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)] md:text-3xl">{item.title}</h3>
+            <p className="mt-2 max-w-2xl text-sm font-medium leading-6 text-white/88 drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)]">
+              {item.description}
+            </p>
           </div>
-          <div className="text-xs font-semibold uppercase tracking-[0.24em] text-white/50">X-FUN Gallery Preview</div>
+          <div className="text-xs font-semibold uppercase tracking-[0.24em] text-white/70 drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)]">
+            X-FUN Gallery Preview
+          </div>
         </motion.div>
       </div>
     </motion.div>
