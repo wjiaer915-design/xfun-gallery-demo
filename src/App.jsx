@@ -52,14 +52,15 @@ function Header() {
 
 function GalleryCard({ item, onClick }) {
   const hasHoverImage = Boolean(item.hoverImage);
-  const isContainThumbnail = item.thumbnailFit === 'contain';
-  const imageFitClass = isContainThumbnail ? 'object-contain scale-[1.12]' : 'object-cover group-hover:scale-[1.015]';
+  const imageFitClass = item.thumbnailFit === 'zoom'
+    ? 'object-cover scale-[1.42]'
+    : 'object-cover group-hover:scale-[1.015]';
 
   return (
     <motion.button
       type="button"
       layoutId={`card-${item.id}`}
-      className={`group flex min-h-[300px] flex-col overflow-hidden border-b border-r border-[#e6e6e6] bg-white text-left outline-none transition hover:z-10 hover:shadow-[0_18px_46px_rgba(15,23,42,0.12)] focus-visible:ring-2 focus-visible:ring-[#7c3cff] ${sizeClassMap[item.size]}`}
+      className={`group flex h-full min-h-0 w-full flex-col self-stretch overflow-hidden border-b border-r border-[#e6e6e6] bg-white text-left outline-none transition hover:z-10 hover:shadow-[0_18px_46px_rgba(15,23,42,0.12)] focus-visible:ring-2 focus-visible:ring-[#7c3cff] ${sizeClassMap[item.size]}`}
       onClick={onClick}
       transition={{ duration: 0.2 }}
     >
@@ -97,7 +98,7 @@ function GallerySection({ section, onOpen }) {
           <ArrowRight size={13} />
         </a>
       </div>
-      <div className="grid auto-rows-[360px] grid-cols-1 border-l border-[#e7e7e7] md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid auto-rows-[360px] grid-cols-1 items-stretch border-l border-[#e7e7e7] md:grid-cols-2 xl:grid-cols-4">
         {section.items.map((item) => (
           <GalleryCard key={item.id} item={item} onClick={() => onOpen(item)} />
         ))}
