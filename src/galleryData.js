@@ -31,6 +31,7 @@ export const galleryData = [
         title: '精品包装',
         description: '为打奶品牌专门打造一款饮料包装',
         image: '/images/snow-bottle.jpg',
+        hoverImage: '/images/snow-bottle-hover.png',
         size: 'small',
       },
       {
