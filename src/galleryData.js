@@ -94,6 +94,7 @@ export const galleryData = [
         title: '拙碑体',
         description: '为打奶品牌专门打造一款饮料包装',
         image: '/images/rough-font.jpg',
+        thumbnailFit: 'contain',
         size: 'small',
       },
       {
@@ -101,6 +102,7 @@ export const galleryData = [
         title: '烟火雅笔',
         description: '为Day_TM品牌设计一系列食品包装',
         image: '/images/smoke-font.jpg',
+        thumbnailFit: 'contain',
         size: 'small',
       },
       {
@@ -115,6 +117,7 @@ export const galleryData = [
         title: '逸尘体',
         description: 'Foodscross品牌专门为蜂蜜设计一款包装',
         image: '/images/escape-font.jpg',
+        thumbnailFit: 'contain',
         size: 'small',
       },
       {
@@ -122,6 +125,7 @@ export const galleryData = [
         title: '憨圆体',
         description: '为Zoi品牌设计水果味一系列冰柔包装',
         image: '/images/circle-font.jpg',
+        thumbnailFit: 'contain',
         size: 'small',
       },
     ],

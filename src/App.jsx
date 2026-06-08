@@ -52,6 +52,8 @@ function Header() {
 
 function GalleryCard({ item, onClick }) {
   const hasHoverImage = Boolean(item.hoverImage);
+  const isContainThumbnail = item.thumbnailFit === 'contain';
+  const imageFitClass = isContainThumbnail ? 'object-contain scale-[1.12]' : 'object-cover group-hover:scale-[1.015]';
 
   return (
     <motion.button
@@ -61,23 +63,23 @@ function GalleryCard({ item, onClick }) {
       onClick={onClick}
       transition={{ duration: 0.2 }}
     >
-      <div className="relative flex min-h-0 flex-1 items-center justify-center bg-white">
+      <div className="relative min-h-0 flex-1 overflow-hidden bg-white">
         <img
           src={item.image}
           alt={item.title}
-          className={`absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.015] ${hasHoverImage ? 'group-hover:opacity-0' : ''}`}
+          className={`absolute inset-0 block h-full w-full ${imageFitClass} object-center transition duration-500 ${hasHoverImage ? 'group-hover:opacity-0' : ''}`}
           loading="lazy"
         />
         {hasHoverImage && (
           <img
             src={item.hoverImage}
             alt={`${item.title} 样机`}
-            className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:scale-[1.015] group-hover:opacity-100"
+            className="absolute inset-0 block h-full w-full object-cover object-center opacity-0 transition duration-500 group-hover:scale-[1.015] group-hover:opacity-100"
             loading="lazy"
           />
         )}
       </div>
-      <div className="h-[58px] border-t border-[#e8e8e8] bg-white px-3 py-2">
+      <div className="h-[58px] bg-white px-3 py-2">
         <h3 className="truncate text-[13px] font-bold text-[#1f2937]">{item.title}</h3>
         <p className="mt-1 truncate text-[12px] leading-4 text-[#6b7280]">{item.description}</p>
       </div>
