@@ -55,6 +55,9 @@ function GalleryCard({ item, onClick }) {
   const imageFitClass = item.thumbnailFit === 'zoom'
     ? 'object-cover scale-[1.42]'
     : 'object-cover scale-[1.03] group-hover:scale-[1.055]';
+  const hoverImageFitClass = item.hoverFit === 'contain'
+    ? 'object-contain'
+    : 'scale-[1.03] object-cover group-hover:scale-[1.055]';
 
   return (
     <motion.button
@@ -75,7 +78,7 @@ function GalleryCard({ item, onClick }) {
           <img
             src={item.hoverImage}
             alt={`${item.title} 样机`}
-            className="absolute inset-0 block h-full w-full scale-[1.03] object-cover object-center opacity-0 transition duration-500 group-hover:scale-[1.055] group-hover:opacity-100"
+            className={`absolute inset-0 block h-full w-full ${hoverImageFitClass} object-center opacity-0 transition duration-500 group-hover:opacity-100`}
             loading="lazy"
           />
         )}

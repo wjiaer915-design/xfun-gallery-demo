@@ -10,6 +10,7 @@ export const galleryData = [
         description: '为打奶品牌专门打造一款饮料包装',
         image: '/images/zoe-ice-tea.jpg',
         hoverImage: '/images/zoe-ice-tea-hover.png',
+        hoverFit: 'contain',
         size: 'small',
       },
       {
