@@ -16,10 +16,7 @@ function Header() {
     <header className="sticky top-0 z-30 border-b border-[#e7e7e7] bg-white/95 backdrop-blur">
       <div className="flex h-14 items-center justify-between px-4 md:px-5">
         <a href="#" className="flex items-center gap-2">
-          <div className="relative h-6 w-20">
-            <span className="absolute left-0 top-0 text-[25px] font-black leading-none tracking-[0.02em] text-[#7447ff]">X</span>
-            <span className="absolute left-[21px] top-[1px] text-[24px] font-black leading-none tracking-[0.08em] text-[#202124]">FUN</span>
-          </div>
+          <img src="/images/xfun-logo.png" alt="X-FUN" className="h-5 w-[104px] shrink-0 object-contain object-left" />
           <span className="hidden border-l border-[#d8d8d8] pl-2 text-[10px] font-semibold tracking-[0.24em] text-[#4b5563] sm:inline">
             智能图像设计平台
           </span>
