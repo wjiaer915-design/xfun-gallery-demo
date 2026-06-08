@@ -9,6 +9,7 @@ export const galleryData = [
         title: '打奶红茶饮料',
         description: '为打奶品牌专门打造一款饮料包装',
         image: '/images/zoe-ice-tea.jpg',
+        hoverImage: '/images/zoe-ice-tea-hover.png',
         size: 'small',
       },
       {

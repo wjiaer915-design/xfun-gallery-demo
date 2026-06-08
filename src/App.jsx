@@ -54,7 +54,7 @@ function GalleryCard({ item, onClick }) {
   const hasHoverImage = Boolean(item.hoverImage);
   const imageFitClass = item.thumbnailFit === 'zoom'
     ? 'object-cover scale-[1.42]'
-    : 'object-cover group-hover:scale-[1.015]';
+    : 'object-cover scale-[1.03] group-hover:scale-[1.055]';
 
   return (
     <motion.button
@@ -75,12 +75,12 @@ function GalleryCard({ item, onClick }) {
           <img
             src={item.hoverImage}
             alt={`${item.title} 样机`}
-            className="absolute inset-0 block h-full w-full object-cover object-center opacity-0 transition duration-500 group-hover:scale-[1.015] group-hover:opacity-100"
+            className="absolute inset-0 block h-full w-full scale-[1.03] object-cover object-center opacity-0 transition duration-500 group-hover:scale-[1.055] group-hover:opacity-100"
             loading="lazy"
           />
         )}
       </div>
-      <div className="h-[58px] bg-white px-3 py-2">
+      <div className="h-[58px] shrink-0 bg-white px-3 py-2">
         <h3 className="truncate text-[13px] font-bold text-[#1f2937]">{item.title}</h3>
         <p className="mt-1 truncate text-[12px] leading-4 text-[#6b7280]">{item.description}</p>
       </div>
