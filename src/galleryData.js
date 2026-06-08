@@ -94,6 +94,7 @@ export const galleryData = [
         title: '拙碑体',
         description: '为打奶品牌专门打造一款饮料包装',
         image: '/images/rough-font.jpg',
+        hoverImage: '/images/rough-font-hover.png',
         thumbnailFit: 'zoom',
         size: 'small',
       },
