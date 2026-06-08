@@ -38,6 +38,7 @@ export const galleryData = [
         title: '优质封蜂蜜包装',
         description: 'Foodscross品牌专门为蜂蜜设计一款包装',
         image: '/images/honey-bottle.jpg',
+        hoverImage: '/images/honey-bottle-hover.png',
         size: 'small',
       },
     ],
@@ -59,6 +60,7 @@ export const galleryData = [
         title: 'Zoi 冰柔系列',
         description: '为Zoi品牌设计水果味一系列冰柔包装',
         image: '/images/zoi-icecream.jpg',
+        hoverImage: '/images/zoi-icecream-hover.png',
         size: 'small',
       },
       {
@@ -66,6 +68,7 @@ export const galleryData = [
         title: 'Day_TM系列包装',
         description: '为Day_TM品牌设计一系列食品包装',
         image: '/images/salmon-box.jpg',
+        hoverImage: '/images/salmon-box-hover.png',
         size: 'small',
       },
       {
@@ -73,6 +76,7 @@ export const galleryData = [
         title: '黑巧克力燕衣',
         description: 'ION，黑巧克力燕衣 72% 可可',
         image: '/images/ion-cocoa.jpg',
+        hoverImage: '/images/ion-cocoa-hover.png',
         size: 'small',
       },
       {
@@ -80,6 +84,7 @@ export const galleryData = [
         title: '三文鱼油包装',
         description: '专门为三文鱼油设计包装',
         image: '/images/asa-yellow.jpg',
+        hoverImage: '/images/asa-yellow-hover.png',
         size: 'small',
       },
     ],
@@ -103,6 +108,7 @@ export const galleryData = [
         title: '烟火雅笔',
         description: '为Day_TM品牌设计一系列食品包装',
         image: '/images/smoke-font.jpg',
+        hoverImage: '/images/circle-font-hover.png',
         thumbnailFit: 'zoom',
         size: 'small',
       },
