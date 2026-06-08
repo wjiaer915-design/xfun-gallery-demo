@@ -59,21 +59,20 @@ function GalleryCard({ item, onClick }) {
       layoutId={`card-${item.id}`}
       className={`group flex min-h-[300px] flex-col overflow-hidden border-b border-r border-[#e6e6e6] bg-white text-left outline-none transition hover:z-10 hover:shadow-[0_18px_46px_rgba(15,23,42,0.12)] focus-visible:ring-2 focus-visible:ring-[#7c3cff] ${sizeClassMap[item.size]}`}
       onClick={onClick}
-      whileHover={{ y: -2 }}
       transition={{ duration: 0.2 }}
     >
-      <div className="relative flex min-h-0 flex-1 items-center justify-center bg-[#fafafa]">
+      <div className="relative flex min-h-0 flex-1 items-center justify-center bg-white">
         <img
           src={item.image}
           alt={item.title}
-          className={`h-full max-h-full w-full object-contain transition duration-500 group-hover:scale-[1.015] ${hasHoverImage ? 'group-hover:opacity-0' : ''}`}
+          className={`absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.015] ${hasHoverImage ? 'group-hover:opacity-0' : ''}`}
           loading="lazy"
         />
         {hasHoverImage && (
           <img
             src={item.hoverImage}
             alt={`${item.title} 样机`}
-            className="absolute inset-0 h-full max-h-full w-full object-contain opacity-0 transition duration-500 group-hover:scale-[1.015] group-hover:opacity-100"
+            className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:scale-[1.015] group-hover:opacity-100"
             loading="lazy"
           />
         )}
