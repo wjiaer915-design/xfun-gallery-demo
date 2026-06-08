@@ -58,6 +58,7 @@ function GalleryCard({ item, onClick }) {
   const hoverImageFitClass = item.hoverFit === 'contain'
     ? 'object-contain'
     : 'scale-[1.03] object-cover group-hover:scale-[1.055]';
+  const hoverImageToneClass = item.hoverTone === 'soft' ? 'brightness-[0.82] contrast-[0.92] saturate-[0.92]' : '';
 
   return (
     <motion.button
@@ -78,7 +79,7 @@ function GalleryCard({ item, onClick }) {
           <img
             src={item.hoverImage}
             alt={`${item.title} 样机`}
-            className={`absolute inset-0 block h-full w-full ${hoverImageFitClass} object-center opacity-0 transition duration-500 group-hover:opacity-100`}
+            className={`absolute inset-0 block h-full w-full ${hoverImageFitClass} ${hoverImageToneClass} object-center opacity-0 transition duration-500 group-hover:opacity-100`}
             loading="lazy"
           />
         )}
