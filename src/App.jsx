@@ -124,47 +124,30 @@ function DetailModal({ item, onClose }) {
     };
   }, [onClose]);
 
+  const detailImage = item.detailImage || item.hoverImage || item.image;
+
   return (
     <motion.div
-      className="fixed inset-0 z-50 overflow-hidden bg-black"
+      className="fixed inset-0 z-50 bg-[#e9e7dc]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <img src={item.image} alt="" className="absolute inset-0 h-full w-full scale-125 object-cover blur-3xl" />
-      <div className="absolute inset-0 bg-black/72" />
       <button
         type="button"
-        className="absolute right-5 top-5 z-20 grid h-11 w-11 place-items-center rounded-full bg-white/12 text-white backdrop-blur transition hover:bg-white/22 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+        className="fixed right-5 top-5 z-20 grid h-11 w-11 place-items-center rounded-full bg-black/70 text-white backdrop-blur transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-black"
         aria-label="关闭详情"
         onClick={onClose}
       >
         <X size={24} />
       </button>
 
-      <div className="relative z-10 flex h-full flex-col gap-5 px-5 py-16 md:px-12">
-        <motion.div
-          layoutId={`card-${item.id}`}
-          className="mx-auto flex min-h-0 w-full max-w-[1260px] flex-1 items-center justify-center rounded-[10px] bg-white/8 p-3 shadow-modal backdrop-blur-sm md:p-5"
-        >
-          <img src={item.image} alt={item.title} className="h-full max-h-full w-full object-contain" />
-        </motion.div>
-        <motion.div
-          className="mx-auto flex w-full max-w-[1260px] flex-col justify-between gap-4 rounded-[10px] border border-white/12 bg-black/48 px-5 py-4 text-white shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur-md md:flex-row md:items-end md:px-6"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.12 }}
-        >
-          <div>
-            <h3 className="text-2xl font-extrabold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)] md:text-3xl">{item.title}</h3>
-            <p className="mt-2 max-w-2xl text-sm font-medium leading-6 text-white/88 drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)]">
-              {item.description}
-            </p>
-          </div>
-          <div className="text-xs font-semibold uppercase tracking-[0.24em] text-white/70 drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)]">
-            X-FUN Gallery Preview
-          </div>
-        </motion.div>
+      <div className="h-screen overflow-y-auto">
+        <img
+          src={detailImage}
+          alt={item.title}
+          className="mx-auto block w-full max-w-[900px] h-auto"
+        />
       </div>
     </motion.div>
   );
