@@ -13,13 +13,14 @@ export const galleryData = [
         hoverFit: 'contain',
         size: 'small',
       },
-      {
-        id: 'day-tm-2in1',
-        title: 'Day_TM系列包装',
-        description: '为Day_TM品牌设计一系列食品包装',
-        image: '/images/day-tm-2in1.jpg',
-        size: 'small',
-      },
+     {
+  id: 'yijiazhiyan',
+  title: '一家之言宠物粮包装',
+  description: '四维能量系统宠物食品包装视觉设计',
+  image: '/images/yijiazhiyan-cover.png',
+  detailImage: '/images/yijiazhiyan-detail.png',
+  size: 'small',
+},
       {
         id: 'olive-tree',
         title: '橄榄树瓶子包装',
