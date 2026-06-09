@@ -15,15 +15,13 @@ function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-[#e7e7e7] bg-white/95 backdrop-blur">
       <div className="flex h-14 items-center justify-between px-4 md:px-5">
-        <a href="#" className="flex items-center gap-2">
-          <span className="flex shrink-0 items-center" aria-label="X-FUN">
-            <img src="/images/xfun-mark.png" alt="" className="h-5 w-5 object-contain" />
-            <span className="ml-1 text-[26px] font-black leading-none tracking-[0.01em] text-[#202124]">FUN</span>
-          </span>
-          <span className="hidden border-l border-[#d8d8d8] pl-2 text-[10px] font-semibold tracking-[0.24em] text-[#4b5563] sm:inline">
-            智能图像设计平台
-          </span>
-        </a>
+      <a href="#" className="flex items-center">
+  <img
+    src="/images/xfun-logo.png"
+    alt="XFUN 智能图像设计平台"
+    className="h-5 w-auto object-contain"
+  />
+</a>
 
         <nav className="hidden h-full items-center gap-14 text-[13px] font-bold text-[#111827] md:flex">
           {navItems.map((item) => (
