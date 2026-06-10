@@ -12,7 +12,7 @@ export const galleryData = [
   hoverImage: '/images/zoi-ice-tea-hover.png',
   detailImage: '/images/zoi-ice-tea-detail.png',
   size: 'small',
-}
+},
      {
   id: 'yijiazhiyan',
   title: '一家之言宠物粮包装',
