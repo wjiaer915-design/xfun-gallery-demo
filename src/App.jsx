@@ -136,11 +136,13 @@ function DetailModal({ item, onClose }) {
       {/* 顶部详情栏 */}
 <div className="fixed left-0 top-0 z-30 flex h-14 w-full items-center justify-between bg-[#202020] px-6 text-white">
 <div className="flex items-center gap-6">
+<div className="flex h-10 items-center rounded-md bg-white px-3">
   <img
     src="/images/xfun-logo.png"
     alt="X-FUN"
-    className="h-8 w-auto object-contain"
+    className="h-7 w-auto object-contain"
   />
+</div>
 
   <div className="hidden items-center gap-5 text-[13px] text-white/75 md:flex">
     <span className="flex items-center gap-1.5">
