@@ -145,12 +145,11 @@ function DetailModal({ item, onClose }) {
             <X size={15} />
           </button>
 
-          <div className="leading-tight">
-            <div className="text-[12px] font-bold text-white">X-FUN 专业包装好料</div>
-            <div className="text-[10px] uppercase tracking-[0.08em] text-white/45">
-              PROTOTYPING CENTER
-            </div>
-          </div>
+         <img
+  src="/images/xfun-logo.png"
+  alt="X-FUN 包装打样中心"
+  className="h-8 w-auto object-contain"
+/>
 
           <div className="ml-6 hidden items-center gap-5 text-[11px] text-white/65 md:flex">
             <span className="flex items-center gap-1">
