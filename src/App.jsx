@@ -134,38 +134,29 @@ function DetailModal({ item, onClose }) {
       exit={{ opacity: 0 }}
     >
       {/* 顶部详情栏 */}
-      <div className="fixed left-1/2 top-0 z-30 flex h-12 w-full max-w-[1590px] -translate-x-1/2 items-center justify-between bg-[#202020] px-5 text-white">
-        <div className="flex items-center gap-3">
-          <button
-            type="button"
-            className="grid h-6 w-6 place-items-center rounded-full bg-white text-black"
-            aria-label="关闭详情"
-            onClick={onClose}
-          >
-            <X size={15} />
-          </button>
+<div className="fixed left-0 top-0 z-30 flex h-14 w-full items-center justify-between bg-[#202020] px-6 text-white">
+<div className="flex items-center gap-6">
+  <img
+    src="/images/xfun-logo.png"
+    alt="X-FUN"
+    className="h-8 w-auto object-contain"
+  />
 
-         <img
-  src="/images/xfun-logo.png"
-  alt="X-FUN 包装打样中心"
-  className="h-8 w-auto object-contain"
-/>
-
-          <div className="ml-6 hidden items-center gap-5 text-[11px] text-white/65 md:flex">
-            <span className="flex items-center gap-1">
-              <i className="h-2 w-2 rounded-full bg-yellow-400" />
-              24h 急速出样
-            </span>
-            <span className="flex items-center gap-1">
-              <i className="h-2 w-2 rounded-full bg-orange-300" />
-              Pantone 原厂色准
-            </span>
-            <span className="flex items-center gap-1">
-              <i className="h-2 w-2 rounded-full bg-green-400" />
-              多种特种纸质感
-            </span>
-          </div>
-        </div>
+  <div className="hidden items-center gap-5 text-[13px] text-white/75 md:flex">
+    <span className="flex items-center gap-1.5">
+      <i className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+      24h 急速出样
+    </span>
+    <span className="flex items-center gap-1.5">
+      <i className="h-2.5 w-2.5 rounded-full bg-orange-300" />
+      Pantone 原厂色准
+    </span>
+    <span className="flex items-center gap-1.5">
+      <i className="h-2.5 w-2.5 rounded-full bg-green-400" />
+      多种特种纸质感
+    </span>
+  </div>
+</div>
 
         <button className="hidden rounded-full border border-white/20 px-4 py-1.5 text-[11px] text-white/80 md:block">
           咨询打样详情
@@ -173,14 +164,14 @@ function DetailModal({ item, onClose }) {
       </div>
 
       {/* 右上角浮动关闭按钮 */}
-      <button
-        type="button"
-        className="fixed right-5 top-5 z-40 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition hover:bg-white/25"
-        aria-label="关闭详情"
-        onClick={onClose}
-      >
-        <X size={22} />
-      </button>
+<button
+  type="button"
+  className="fixed right-6 top-[70px] z-40 grid h-11 w-11 place-items-center rounded-full bg-black/35 text-white backdrop-blur-md transition hover:bg-black/50"
+  aria-label="关闭详情"
+  onClick={onClose}
+>
+  <X size={24} />
+</button>
 
       {/* 右侧操作栏 */}
       <div className="fixed right-6 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-center gap-4 md:flex">
