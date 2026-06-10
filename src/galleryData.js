@@ -4,15 +4,15 @@ export const galleryData = [
     title: '酒类茶饮包装',
     moreText: '查看更多',
     items: [
-      {
-        id: 'zoe-ice-tea',
-        title: '打奶红茶饮料',
-        description: '为打奶品牌专门打造一款饮料包装',
-        image: '/images/zoe-ice-tea.jpg',
-        hoverImage: '/images/zoe-ice-tea-hover.png',
-        hoverFit: 'contain',
-        size: 'small',
-      },
+     {
+  id: 'zoi-ice-tea',
+  title: 'ZOI ICE TEA',
+  description: '桃味冰茶饮料包装设计',
+  image: '/images/zoi-ice-tea-cover.png',
+  hoverImage: '/images/zoi-ice-tea-hover.png',
+  detailImage: '/images/zoi-ice-tea-detail.png',
+  size: 'small',
+}
      {
   id: 'yijiazhiyan',
   title: '一家之言宠物粮包装',
