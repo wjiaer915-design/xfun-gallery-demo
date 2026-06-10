@@ -32,10 +32,11 @@ export const galleryData = [
       },
       {
         id: 'snow-bottle',
-        title: '精品包装',
-        description: '为打奶品牌专门打造一款饮料包装',
+        title: 'snow water包装',
+        description: '为雪水饮用天然矿泉水品牌专门打造一款定制包装',
         image: '/images/snow-bottle.jpg',
         hoverImage: '/images/snow-bottle-hover.png',
+        detailImage: '/images/snow-water-detail.png',
         size: 'small',
       },
       {
