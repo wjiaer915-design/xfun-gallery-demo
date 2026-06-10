@@ -9,7 +9,7 @@ export const galleryData = [
   title: 'ZOI ICE TEA',
   description: '桃味冰茶饮料包装设计',
   image: '/images/zoe-ice-tea.jpg',
-  hoverImage: '/images/zoi-ice-tea-hover.png',
+  hoverImage: '/images/zoe-ice-tea-hover.png',
   detailImage: '/images/zoi-ice-tea-detail.png',
   size: 'small',
 },
