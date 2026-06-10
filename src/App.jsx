@@ -128,26 +128,106 @@ function DetailModal({ item, onClose }) {
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 bg-[#e9e7dc]"
+      className="fixed inset-0 z-50 bg-black/75 backdrop-blur-[2px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
+      {/* 顶部详情栏 */}
+      <div className="fixed left-1/2 top-0 z-30 flex h-12 w-full max-w-[1590px] -translate-x-1/2 items-center justify-between bg-[#202020] px-5 text-white">
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            className="grid h-6 w-6 place-items-center rounded-full bg-white text-black"
+            aria-label="关闭详情"
+            onClick={onClose}
+          >
+            <X size={15} />
+          </button>
+
+          <div className="leading-tight">
+            <div className="text-[12px] font-bold text-white">X-FUN 专业包装好料</div>
+            <div className="text-[10px] uppercase tracking-[0.08em] text-white/45">
+              PROTOTYPING CENTER
+            </div>
+          </div>
+
+          <div className="ml-6 hidden items-center gap-5 text-[11px] text-white/65 md:flex">
+            <span className="flex items-center gap-1">
+              <i className="h-2 w-2 rounded-full bg-yellow-400" />
+              24h 急速出样
+            </span>
+            <span className="flex items-center gap-1">
+              <i className="h-2 w-2 rounded-full bg-orange-300" />
+              Pantone 原厂色准
+            </span>
+            <span className="flex items-center gap-1">
+              <i className="h-2 w-2 rounded-full bg-green-400" />
+              多种特种纸质感
+            </span>
+          </div>
+        </div>
+
+        <button className="hidden rounded-full border border-white/20 px-4 py-1.5 text-[11px] text-white/80 md:block">
+          咨询打样详情
+        </button>
+      </div>
+
+      {/* 右上角浮动关闭按钮 */}
       <button
         type="button"
-        className="fixed right-5 top-5 z-20 grid h-11 w-11 place-items-center rounded-full bg-black/70 text-white backdrop-blur transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-black"
+        className="fixed right-5 top-5 z-40 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition hover:bg-white/25"
         aria-label="关闭详情"
         onClick={onClose}
       >
-        <X size={24} />
+        <X size={22} />
       </button>
 
-      <div className="h-screen overflow-y-auto">
-        <img
-          src={detailImage}
-          alt={item.title}
-          className="mx-auto block w-full max-w-[900px] h-auto"
-        />
+      {/* 右侧操作栏 */}
+      <div className="fixed right-6 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-center gap-4 md:flex">
+        <button className="grid h-10 w-10 place-items-center rounded-full bg-[#7c3cff] text-white shadow-lg">
+          👍
+        </button>
+        <span className="-mt-3 text-[11px] text-white">点赞</span>
+
+        <button className="grid h-10 w-10 place-items-center rounded-full bg-white text-[#333] shadow-lg">
+          ☆
+        </button>
+        <span className="-mt-3 text-[11px] text-white">收藏</span>
+
+        <button className="grid h-10 w-10 place-items-center rounded-full bg-white text-[#333] shadow-lg">
+          ↗
+        </button>
+        <span className="-mt-3 text-[11px] text-white">分享</span>
+      </div>
+
+      {/* 详情长图区域 */}
+      <div className="h-screen overflow-y-auto pt-12">
+        <div className="mx-auto w-full max-w-[1590px] bg-[#ebe9dc]">
+          <img
+            src={detailImage}
+            alt={item.title}
+            className="mx-auto block w-full h-auto"
+          />
+        </div>
+      </div>
+
+      {/* 中间悬浮信息条 */}
+      <div className="fixed left-1/2 top-[50%] z-30 hidden w-[520px] -translate-x-1/2 items-center justify-between rounded-xl bg-black/55 px-3 py-2 text-white shadow-2xl backdrop-blur md:flex">
+        <div className="flex items-center gap-3">
+          <img
+            src={item.image}
+            alt={item.title}
+            className="h-10 w-10 rounded object-cover"
+          />
+          <div>
+            <div className="line-clamp-1 text-[12px] font-bold">{item.title}</div>
+            <div className="line-clamp-1 text-[11px] text-white/60">{item.description}</div>
+          </div>
+        </div>
+        <button className="rounded-full bg-white px-3 py-1.5 text-[11px] font-bold text-black">
+          生成同款包装
+        </button>
       </div>
     </motion.div>
   );
