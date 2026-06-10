@@ -27,6 +27,7 @@ export const galleryData = [
         description: '专门为橄榄树打造一款国际包装设计',
         image: '/images/olive-tree.jpg',
         hoverImage: '/images/olive-tree-hover.png',
+        detailImage: '/images/my-olive-tree-detail.png',
         size: 'wideTall',
       },
       {
