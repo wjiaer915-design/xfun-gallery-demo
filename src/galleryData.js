@@ -62,6 +62,7 @@ export const galleryData = [
         image: '/images/cutthroat-gin.jpg',
         hoverImage: '/images/cutthroat-gin-hover.png',
         hoverTone: 'soft',
+        detailImage: '/images/cutthroat-gin-detail.png',
         size: 'large',
       },
       {
