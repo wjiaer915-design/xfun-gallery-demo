@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, Search, Sparkles, X } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
+import GooeyNav from './components/GooeyNav/GooeyNav';
 import { galleryData } from './galleryData';
 
 const navItems = ['首页', '概念创意', '素材图片', '包装图纸'];
@@ -125,6 +126,11 @@ function DetailModal({ item, onClose }) {
   }, [onClose]);
 
   const detailImage = item.detailImage || item.hoverImage || item.image;
+  const detailNavItems = [
+  { label: '打样服务', href: '#service' },
+  { label: '色彩管理', href: '#color' },
+  { label: '材质工艺', href: '#material' },
+];
 
   return (
     <motion.div
@@ -133,47 +139,46 @@ function DetailModal({ item, onClose }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* 顶部详情栏 */}
-<div className="fixed left-0 top-0 z-30 flex h-14 w-full items-center justify-between bg-[#202020] px-6 text-white">
-<div className="flex items-center gap-6">
-<div className="flex h-10 items-center rounded-md bg-white px-3">
-  <img
-    src="/images/xfun-logo.png"
-    alt="X-FUN"
-    className="h-7 w-auto object-contain"
-  />
-</div>
+{/* 顶部悬浮 Gooey 导航 */}
+<div className="fixed left-1/2 top-5 z-40 flex h-14 w-[calc(100%-48px)] max-w-[1180px] -translate-x-1/2 items-center justify-between rounded-full border border-white/15 bg-black/55 px-4 text-white shadow-2xl backdrop-blur-xl">
+  <div className="flex items-center gap-5">
+    <div className="flex h-9 items-center rounded-full bg-white px-3">
+      <img
+        src="/images/xfun-logo.png"
+        alt="X-FUN"
+        className="h-5 w-auto object-contain"
+      />
+    </div>
 
-  <div className="hidden items-center gap-5 text-[13px] text-white/75 md:flex">
-    <span className="flex items-center gap-1.5">
-      <i className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
-      24h 急速出样
-    </span>
-    <span className="flex items-center gap-1.5">
-      <i className="h-2.5 w-2.5 rounded-full bg-orange-300" />
-      Pantone 原厂色准
-    </span>
-    <span className="flex items-center gap-1.5">
-      <i className="h-2.5 w-2.5 rounded-full bg-green-400" />
-      多种特种纸质感
-    </span>
+    <div className="hidden h-10 items-center md:block">
+      <GooeyNav
+        items={detailNavItems}
+        particleCount={8}
+        particleDistances={[40, 8]}
+        particleR={60}
+        initialActiveIndex={0}
+        animationTime={450}
+        timeVariance={180}
+        colors={[1, 1, 2, 3]}
+      />
+    </div>
+  </div>
+
+  <div className="flex items-center gap-2">
+    <button className="hidden rounded-full bg-white px-4 py-1.5 text-[12px] font-medium text-black transition hover:bg-white/90 md:block">
+      咨询打样详情
+    </button>
+
+    <button
+      type="button"
+      className="grid h-8 w-8 place-items-center rounded-full bg-white/15 text-white transition hover:bg-white/25"
+      aria-label="关闭详情"
+      onClick={onClose}
+    >
+      <X size={20} />
+    </button>
   </div>
 </div>
-
-        <button className="hidden rounded-full border border-white/20 px-4 py-1.5 text-[11px] text-white/80 md:block">
-          咨询打样详情
-        </button>
-      </div>
-
-      {/* 右上角浮动关闭按钮 */}
-<button
-  type="button"
-  className="fixed right-6 top-[70px] z-40 grid h-11 w-11 place-items-center rounded-full bg-black/35 text-white backdrop-blur-md transition hover:bg-black/50"
-  aria-label="关闭详情"
-  onClick={onClose}
->
-  <X size={24} />
-</button>
 
       {/* 右侧操作栏 */}
       <div className="fixed right-6 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-center gap-4 md:flex">
@@ -194,7 +199,7 @@ function DetailModal({ item, onClose }) {
       </div>
 
       {/* 详情长图区域 */}
-      <div className="h-screen overflow-y-auto pt-12">
+<div className="h-screen overflow-y-auto bg-black/70 pt-24">
         <div className="mx-auto w-full max-w-[1590px] bg-[#ebe9dc]">
           <img
             src={detailImage}
