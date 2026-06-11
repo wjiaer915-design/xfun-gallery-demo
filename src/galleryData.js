@@ -65,9 +65,9 @@ export const galleryData = [
         size: 'large',
       },
       {
-        id: 'zoi-icecream',
-        title: 'Zoi 冰柔系列',
-        description: '为Zoi品牌设计水果味一系列冰柔包装',
+        id: 'yaha-juice',
+        title: '雅哈 果汁系列',
+        description: '为雅哈品牌设计水果味一系列饮品包装',
         image: '/images/zoi-icecream.jpg',
         hoverImage: '/images/zoi-icecream-hover.png',
         size: 'small',
