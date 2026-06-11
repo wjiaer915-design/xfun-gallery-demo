@@ -70,6 +70,7 @@ export const galleryData = [
         description: '为雅哈品牌设计水果味一系列饮品包装',
         image: '/images/zoi-icecream.jpg',
         hoverImage: '/images/zoi-icecream-hover.png',
+        detailImage: '/images/dear-candy-detail.png',
         size: 'small',
       },
       {
