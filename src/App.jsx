@@ -140,7 +140,7 @@ function DetailModal({ item, onClose }) {
       exit={{ opacity: 0 }}
     >
 {/* 顶部悬浮 Gooey 导航 */}
-<div className="fixed left-1/2 top-5 z-40 flex h-14 w-[calc(100%-48px)] max-w-[1180px] -translate-x-1/2 items-center justify-between rounded-full border border-white/15 bg-black/55 px-4 text-white shadow-2xl backdrop-blur-xl">
+<div className="fixed left-1/2 top-4 z-40 flex h-12 w-[calc(100%-48px)] max-w-[1180px] -translate-x-1/2 items-center justify-between rounded-full border border-white/15 bg-black/55 px-4 text-white shadow-2xl backdrop-blur-xl">
   <div className="flex items-center gap-5">
     <div className="flex h-9 items-center rounded-full bg-white px-3">
       <img
